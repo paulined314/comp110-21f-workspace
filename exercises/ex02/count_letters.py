@@ -5,10 +5,8 @@ __author__ = "730390549"
 
 letter: str = input("What letter do you want to seach for?: ")
 word: str = input("Enter a word: ")
-
 wordcount: int = 0
 letter_count: int = 0
-
 while wordcount < len(word):
     if word[wordcount] == letter:
         letter_count = letter_count + 1

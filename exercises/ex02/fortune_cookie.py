@@ -12,7 +12,6 @@ __author__ = "730390549"
 from random import randint
 
 
-# Begin your solution here...
 print("Your fortune cookie says...")
 
 a: int = randint(0, 5)
@@ -33,5 +32,4 @@ else:
                     print("You are destined for greatness")
                 else:
                     print("You can achieve everything you want")
-
 print("Now, go spread positive vibes!")

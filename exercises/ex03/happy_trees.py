@@ -1,6 +1,12 @@
 """Drawing forests in a loop."""
 
-__author__ = "123456789"
+__author__ = "730390549"
 
-# The string constant for the pine tree emoji
-TREE: str = '\U0001F332'
+Tree: str = '\U0001F332'
+depth: str = input("Depth: ")
+x = int(depth)
+y = 0
+while y <= x:
+    if y > 0:
+        print(Tree * int(y))
+    y = y + 1

@@ -9,7 +9,6 @@ points: int = 0
 
 def greet() -> None:
     """Greetings."""
-    player = input("What is your name? ")
     print(f"Greetings {player}!")
     print("Welcome to the UNC Dating Sim")
     print("You will be playing as a UNC student, trying to survive your first of college. From staying up all night to finish assignments to going on your first date at Spicy 9, you'll get to meet the very special boys UNC has to offer.")
@@ -104,22 +103,10 @@ def frat() -> None:
     if points >= 50:
         print("Congratualtions! Your date with Chet was a success and you two are now dating! Your future is full of parties and lake trips. You can definitely say you've been living up the college party scene, although you probably won't want to tell that to your parents.")
         print(NAMED_CONSTANT)
-        print("Do you want to play again?")
-        print("1. Yes")
-        print("2. No")
-        gm = int(input("CHOOSE AN OPTION. "))
-        if gm == 2:
-            print("Thank you for playing.")
-            return None
+        return None
     else:
         print("Unfortunately, Chet's frat got invovled in a huge scandal that invovled a hazing going very badly. Chet and everyone in his frat were arrested but will probably post bail. Either way, you decided that you two really just did not click.")
-        print("Do you want to play again?")
-        print("1. Yes")
-        print("2. No")
-        gm = int(input("CHOOSE AN OPTION. "))
-        if gm == 2:
-            print("Thank you for playing.")
-            return None
+        return None
 
 
 def snake() -> None:
@@ -148,13 +135,7 @@ def snake() -> None:
         else:
             print("Game Over")
             print(f"Points: {points}")
-            print("Do you want to play again?")
-            print("1. Yes")
-            print("2. No")
-            gm = int(input("CHOOSE AN OPTION. "))
-            if gm == 2:
-                print("Thank you for playing.")
-                return None
+            return None
     else:
         if a == 2:
             points = 20
@@ -168,13 +149,7 @@ def snake() -> None:
             else:
                 print("Game Over")
                 print(f"Points: {points}")
-                print("Do you want to play again?")
-                print("1. Yes")
-                print("2. No")
-                gm = int(input("CHOOSE AN OPTION. "))
-                if gm == 2:
-                    print("Thank you for playing.")
-                    return None
+                return None
         else: 
             if a == 3:
                 points == points + 10
@@ -188,13 +163,7 @@ def snake() -> None:
                 else:
                     print("Game Over")
                     print(f"Points: {points}")
-                    print("Do you want to play again?")
-                    print("1. Yes")
-                    print("2. No")
-                    gm = int(input("CHOOSE AN OPTION. "))
-                    if gm == 2:
-                        print("Thank you for playing.")
-                        return None
+                    return None
     if points >= 20:
         print("Story: Friday night comes around and you've arrived at TOPO. Jayden has just walked up.")
         print(f"Jayden: Hey {player}")
@@ -246,22 +215,9 @@ def snake() -> None:
     if points >= 50:
         print("Congratualtions! Your date with Jayden was a success and you two are now dating! You two become business tycoon that can't be stopped. He even becomes a shark on Shark Tank at some point in his career.")
         print(NAMED_CONSTANT)
-        print("Do you want to play again?")
-        print("1. Yes")
-        print("2. No")
-        gm = int(input("CHOOSE AN OPTION. "))
-        if gm == 2:
-            print("Thank you for playing.")
-            return None
+        return None
     else:
         print("Unfortunately, Jayden projected your future retirement and broke things off because you didn't match his stock portfolio")
-        print("Do you want to play again?")
-        print("1. Yes")
-        print("2. No")
-        gm = int(input("CHOOSE AN OPTION. "))
-        if gm == 2:
-            print("Thank you for playing.")
-            return None
 
 
 def premed() -> None:
@@ -290,13 +246,7 @@ def premed() -> None:
         else:
             print("Game Over")
             print(f"Points: {points}")
-            print("Do you want to play again?")
-            print("1. Yes")
-            print("2. No")
-            gm = int(input("CHOOSE AN OPTION. "))
-            if gm == 2:
-                print("Thank you for playing.")
-                return None
+            return None
     else:
         if a == 2:
             points = points + 10
@@ -310,13 +260,7 @@ def premed() -> None:
             else:
                 print("Game Over")
                 print(f"Points: {points}")
-                print("Do you want to play again?")
-                print("1. Yes")
-                print("2. No")
-                gm = int(input("CHOOSE AN OPTION. "))
-                if gm == 2:
-                    print("Thank you for playing.")
-                    return None
+                return None
         else: 
             if a == 3:
                 points = points + 10
@@ -330,13 +274,7 @@ def premed() -> None:
                 else:
                     print("Game Over")
                     print(f"Points: {points}")
-                    print("Do you want to play again?")
-                    print("1. Yes")
-                    print("2. No")
-                    gm = int(input("CHOOSE AN OPTION. "))
-                    if gm == 2:
-                        print("Thank you for playing.")
-                        return None
+                    return None
     if points >= 20:
         print("Story: You guys walk to Davis talking about all the other classes you guys are taking right now and how CHEM 101 falls into it your majors.He holds the door open for you.")
         print(f"John: After you, {player}")
@@ -387,22 +325,10 @@ def premed() -> None:
     if points >= 50:
         print("Congratualtions! Your date with John was a success and you two become regular study buddies for the rest of undergrad. He eventually gets into the UNC Med School and you family is so happy that you found a successful boyfriend.")
         print(NAMED_CONSTANT)
-        print("Do you want to play again?")
-        print("1. Yes")
-        print("2. No")
-        gm = int(input("CHOOSE AN OPTION. "))
-        if gm == 2:
-            print("Thank you for playing.")
-            return None
+        return None
     else:
         print("Unfortunately, John went off to study on his own the minute finals season hit and you guys haven't really talked since then.")
-        print("Do you want to play again?")
-        print("1. Yes")
-        print("2. No")
-        gm = int(input("CHOOSE AN OPTION. "))
-        if gm == 2:
-            print("Thank you for playing.")
-            return None
+        return None
 
 
 def Dukey(choice: int) -> int:
@@ -431,13 +357,7 @@ def Dukey(choice: int) -> int:
         else:
             print("Game Over")
             print(f"Points: {points}")
-            print("Do you want to play again?")
-            print("1. Yes")
-            print("2. No")
-            gm = int(input("CHOOSE AN OPTION. "))
-            if gm == 2:
-                print("Thank you for playing.")
-                return points
+            return points
     else:
         if a == 2:
             points = points + 10
@@ -451,13 +371,7 @@ def Dukey(choice: int) -> int:
             else:
                 print("Game Over")
                 print(f"Points: {points}")
-                print("Do you want to play again?")
-                print("1. Yes")
-                print("2. No")
-                gm = int(input("CHOOSE AN OPTION. "))
-                if gm == 2:
-                    print("Thank you for playing.")
-                    return points
+                return points
         else: 
             if a == 3:
                 points = points + 10
@@ -471,13 +385,7 @@ def Dukey(choice: int) -> int:
                 else:
                     print("Game Over")
                     print(f"Points: {points}")
-                    print("Do you want to play again?")
-                    print("1. Yes")
-                    print("2. No")
-                    gm = int(input("CHOOSE AN OPTION. "))
-                    if gm == 2:
-                        print("Thank you for playing.")
-                        return points
+                    return points
     if points >= 20:
         print("Story: You guys meet at the Duke Gardens. You walk the romantic pathways together while looking at the beautiful plants.")
         print(f"{player}: So what's your major?")

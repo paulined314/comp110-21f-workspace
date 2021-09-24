@@ -1,6 +1,5 @@
-# TODO: """Hype Machine"""
-
-# TODO: _author_ = "730390549"
+"""hype_machine."""
+__author__ = "730390549"
 
 # TODO: "python"
 name: str = input("What is your name? ")

@@ -11,4 +11,4 @@ while wordcount < len(word):
     if word[wordcount] == letter:
         letter_count = letter_count + 1
     wordcount = wordcount + 1
-print(letter_count)
+print("Count: " + str(letter_count))

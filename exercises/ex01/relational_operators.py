@@ -1,5 +1,5 @@
-"""polite_logic"""
-_author_ = "730390549"
+"""polite_logic."""
+__author__ = "730390549"
 
 input_one: str = input("Left-hand side: ")
 input_two: str = input("Right-hand side: ")

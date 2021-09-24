@@ -14,11 +14,11 @@ while a < len(word):
                 repeat = repeat + 1
             b = b + 1
         if repeat > 1:
-            print("Found Duplicate: True")
+            print("Found duplicate: True")
             a = len(word)
         else:
             a = a + 1
             if a >= len(word):
-                print("Found Duplicate: False")
+                print("Found duplicate: False")
             
         

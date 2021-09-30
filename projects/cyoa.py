@@ -1,22 +1,22 @@
-"""Dating the lovely boys at UNC."""
+"""Dating the Lovely boys at UNC."""
 
 __author__ = "730390549"
+
 from random import randint
 NAMED_CONSTANT: str = '\u2764\uFE0F'
-player: str = input("What is your name? ")
+player: str = ""
 points: int = 0
 
 
 def greet() -> None:
     """Greetings."""
-    print(f"Greetings {player}!")
     print("Welcome to the UNC Dating Sim")
     print("You will be playing as a UNC student, trying to survive your first of college. From staying up all night to finish assignments to going on your first date at Spicy 9, you'll get to meet the very special boys UNC has to offer.")
     return None
 
 
 def frat() -> None:
-    """Frat boy."""
+    """Frat."""
     points = 0
     print("Story: It's a Saturday night and your roomate talks you into coming with her to a frat party. (Imagine that this is pre-Covid because you totally wouldn't go to a party during the panorama right?)")
     print("Hi my name is Chet. I'm in Alpha Beta Delta. ")
@@ -103,232 +103,339 @@ def frat() -> None:
     if points >= 50:
         print("Congratualtions! Your date with Chet was a success and you two are now dating! Your future is full of parties and lake trips. You can definitely say you've been living up the college party scene, although you probably won't want to tell that to your parents.")
         print(NAMED_CONSTANT)
-        return None
+        print("Do you want to play again?")
+        print("1. Yes")
+        print("2. No")
+        gm = int(input("CHOOSE AN OPTION. "))
+        if gm == 2:
+            print("Thank you for playing.")
+            return None
     else:
         print("Unfortunately, Chet's frat got invovled in a huge scandal that invovled a hazing going very badly. Chet and everyone in his frat were arrested but will probably post bail. Either way, you decided that you two really just did not click.")
-        return None
+        print("Do you want to play again?")
+        print("1. Yes")
+        print("2. No")
+        gm = int(input("CHOOSE AN OPTION. "))
+        if gm == 2:
+            print("Thank you for playing.")
+            return None
 
 
 def snake() -> None:
     """Snake."""
-    points = 0
-    print("Story: It's the first day of your ECON 101 class. You're sitting next to an attractive boy with short blond hair and hazel eyes that seemed to be capturing your attention more than the lecture ever could. He noticed you stealing glaces at him.")
-    print("Hi my name is Jayden. What's your name?")
-    player = input("What is your name? ")
-    print(f"Jayden: It's nice to meet you {player}.")
-    print(f"{player}: Hi.")
-    print("Jayden: Do you usually stare at other students during class?")
-    print("1. Yeah, all the time.")
-    print("2. No, not really.")
-    print("3. Depends. Are you usually here?")
-    a = int(input("CHOOSE AN OPTION. "))
-    points = points + 10
-    if a == 1:
+    repeat = 0
+    while repeat < 1:
+        points = 0
+        print("Story: It's the first day of your ECON 101 class. You're sitting next to an attractive boy with short blond hair and hazel eyes that seemed to be capturing your attention more than the lecture ever could. He noticed you stealing glaces at him.")
+        print("Hi my name is Jayden. What's your name?")
+        player = input("What is your name? ")
+        print(f"Jayden: It's nice to meet you {player}.")
+        print(f"{player}: Hi.")
+        print("Jayden: Do you usually stare at other students during class?")
+        print("1. Yeah, all the time.")
+        print("2. No, not really.")
+        print("3. Depends. Are you usually here?")
+        a = int(input("CHOOSE AN OPTION. "))
         points = points + 10
-        print("Jayden: Aw, here I was feeling special. Too bad, I would have asked you to TOPO if I was.")
-        print("1. Hey, you're the one who said you weren't special.")
-        print("2. Yeah, too bad.")
-        a_1 = int(input("CHOOSE AN OPTION. "))
-        if a_1 == 1:
-            print("Jayden: Well then, I guess you and I will be meeting at TOPO firday night.")
-            points = 20
-        else:
-            print("Game Over")
-            print(f"Points: {points}")
-            return None
-    else:
-        if a == 2:
-            points = 20
-            print("Jayden: Well if you enjoy stealing glances at me during class, would you like to be stealing glaces at me over dinner? Maybe Friday night at TOPO?")
-            print("1. Yeah, I'd like that.")
-            print("2. Sorry, I'm not really interested.")
-            a_2 = int(input("CHOOSE AN OPTION. "))
-            if a_2 == 1:
-                print("Jayden: Great. Then I'll see you Friday night at TOPO.")
+        if a == 1:
+            points = points + 10
+            print("Jayden: Aw, here I was feeling special. Too bad, I would have asked you to TOPO if I was.")
+            print("1. Hey, you're the one who said you weren't special.")
+            print("2. Yeah, too bad.")
+            a_1 = int(input("CHOOSE AN OPTION. "))
+            if a_1 == 1:
+                print("Jayden: Well then, I guess you and I will be meeting at TOPO firday night.")
                 points = 20
             else:
                 print("Game Over")
                 print(f"Points: {points}")
-                return None
-        else: 
-            if a == 3:
-                points == points + 10
-                print("Jayden: Sure, but I'd hate for you to fail ECON because I keep stealing your attention away from our dear professor. How about focusing now and Friday night I get your full attention over dinner at TOPO?")
-                print("1. Sounds good to me.")
-                print("2. No thanks.")
-                a_3 = int(input("CHOOSE AN OPTION. "))
-                if a_3 == 1:
+                print("Do you want to play again?")
+                print("1. Yes")
+                print("2. No")
+                gm = int(input("CHOOSE AN OPTION. "))
+                if gm == 1:
+                    repeat = 0
+                else:
+                    print("Thank you for playing.")
+                    repeat = 2
+                    return None
+        else:
+            if a == 2:
+                points = 20
+                print("Jayden: Well if you enjoy stealing glances at me during class, would you like to be stealing glaces at me over dinner? Maybe Friday night at TOPO?")
+                print("1. Yeah, I'd like that.")
+                print("2. Sorry, I'm not really interested.")
+                a_2 = int(input("CHOOSE AN OPTION. "))
+                if a_2 == 1:
                     print("Jayden: Great. Then I'll see you Friday night at TOPO.")
                     points = 20
                 else:
                     print("Game Over")
                     print(f"Points: {points}")
-                    return None
-    if points >= 20:
-        print("Story: Friday night comes around and you've arrived at TOPO. Jayden has just walked up.")
-        print(f"Jayden: Hey {player}")
-        print("You look nice.")
-        print("1. Thanks, you too.")
-        print("2. I always look nice")
-        b = int(input("CHOOSE AN OPTION. "))
-        if b == 1:
+                    print("Do you want to play again?")
+                    print("1. Yes")
+                    print("2. No")
+                    gm = int(input("CHOOSE AN OPTION. "))
+                    if gm == 1:
+                        repeat = 0
+                    else:
+                        print("Thank you for playing.")
+                        repeat = 2
+                        return None
+            else: 
+                if a == 3:
+                    points == points + 10
+                    print("Jayden: Sure, but I'd hate for you to fail ECON because I keep stealing your attention away from our dear professor. How about focusing now and Friday night I get your full attention over dinner at TOPO?")
+                    print("1. Sounds good to me.")
+                    print("2. No thanks.")
+                    a_3 = int(input("CHOOSE AN OPTION. "))
+                    if a_3 == 1:
+                        print("Jayden: Great. Then I'll see you Friday night at TOPO.")
+                        points = 20
+                    else:
+                        print("Game Over")
+                        print(f"Points: {points}")
+                        print("Do you want to play again?")
+                        print("1. Yes")
+                        print("2. No")
+                        gm = int(input("CHOOSE AN OPTION. "))
+                        if gm == 1:
+                            repeat = 0
+                        else:
+                            print("Thank you for playing.")
+                            repeat = 2
+                            return None
+        if points >= 20:
+            print("Story: Friday night comes around and you've arrived at TOPO. Jayden has just walked up.")
+            print(f"Jayden: Hey {player}")
+            print("You look nice.")
+            print("1. Thanks, you too.")
+            print("2. I always look nice")
+            b = int(input("CHOOSE AN OPTION. "))
+            if b == 1:
+                points = points + 10
+            print("Jayden: Shall we head inside?")
+            print("Story: You two head inside and are seated. After looking over the menu, Chet orders the New York Strip Steak. You order the...")
+            print("1. Southwest Chicken Pasta.")
+            print("2. Top Burger")
+            print("3. Quinao Bowl")
+            input("CHOOSE AN OPTION. ")
             points = points + 10
-        print("Jayden: Shall we head inside?")
-        print("Story: You two head inside and are seated. After looking over the menu, Chet orders the New York Strip Steak. You order the...")
-        print("1. Southwest Chicken Pasta.")
-        print("2. Top Burger")
-        print("3. Quinao Bowl")
-        input("CHOOSE AN OPTION. ")
-        points = points + 10
-        print(f"{player}: So what are your plans after college?")
-        print("Personally, I plan on working on Wall Street after college or be the CEO of my own small business.")
-        print("Jayden: So what are your plans after college?")
-        print("1. Yeah. I also have  very lucrative job prospects for my major after college.")
-        print("2. Wow, I don't really know where my major is going to take me.")
-        c = int(input("CHOOSE AN OPTION"))
-        if c == 1:
-            points = points + 10
+            print(f"{player}: So what are your plans after college?")
+            print("Personally, I plan on working on Wall Street after college or be the CEO of my own small business.")
+            print("Jayden: So what are your plans after college?")
+            print("1. Yeah. I also have  very lucrative job prospects for my major after college.")
+            print("2. Wow, I don't really know where my major is going to take me.")
+            c = int(input("CHOOSE AN OPTION"))
+            if c == 1:
+                points = points + 10
+            else:
+                points = points - 10
+            print("Story: Your food arrives and it is delicious.")
+            print("You: So is there anywhere you want to work in particular?")
+            print("Jayden: Well besides Wallstreet, somewhere international could be fun. There is a lot of money in international trade.")
+            print("1. Wow that sounds fun.")
+            print("2. You know, not everything has to be about the money.")
+            d = int(input("CHOOSE AN OPTION"))
+            if d == 1:
+                points = points + 10
+            else:
+                points = points - 10
+            print("Jayden: Why would you like to live after college?")
+            print("1. A booming city with lots of economic opportunity.")
+            print("2. A smaller place that has its own charm and beauty.")
+            e = int(input("CHOOSE AN OPTION"))
+            if e == 1:
+                points = points + 10
+                print("Yeah, I'd like to live in a city too.")
+            else:
+                points = points - 10
+                print("Oh. That's too bad.")
+        print(f"Story: {player} and Jayden have finished their food. You wonder if you really just had an entire date talking about after college.")
+        print(f"Points: {points}")
+        if points >= 50:
+            print("Congratualtions! Your date with Jayden was a success and you two are now dating! You two become business tycoon that can't be stopped. He even becomes a shark on Shark Tank at some point in his career.")
+            print(NAMED_CONSTANT)
+            print("Do you want to play again?")
+            print("1. Yes")
+            print("2. No")
+            gm = int(input("CHOOSE AN OPTION. "))
+            if gm == 1:
+                repeat = 0
+            else:
+                print("Thank you for playing.")
+                repeat = 2
+                return None
         else:
-            points = points - 10
-        print("Story: Your food arrives and it is delicious.")
-        print("You: So is there anywhere you want to work in particular?")
-        print("Jayden: Well besides Wallstreet, somewhere international could be fun. There is a lot of money in international trade.")
-        print("1. Wow that sounds fun.")
-        print("2. You know, not everything has to be about the money.")
-        d = int(input("CHOOSE AN OPTION"))
-        if d == 1:
-            points = points + 10
-        else:
-            points = points - 10
-        print("Jayden: Why would you like to live after college?")
-        print("1. A booming city with lots of economic opportunity.")
-        print("2. A smaller place that has its own charm and beauty.")
-        e = int(input("CHOOSE AN OPTION"))
-        if e == 1:
-            points = points + 10
-            print("Yeah, I'd like to live in a city too.")
-        else:
-            points = points - 10
-            print("Oh. That's too bad.")
-    print(f"Story: {player} and Jayden have finished their food. You wonder if you really just had an entire date talking about after college.")
-    print(f"Points: {points}")
-    if points >= 50:
-        print("Congratualtions! Your date with Jayden was a success and you two are now dating! You two become business tycoon that can't be stopped. He even becomes a shark on Shark Tank at some point in his career.")
-        print(NAMED_CONSTANT)
-        return None
-    else:
-        print("Unfortunately, Jayden projected your future retirement and broke things off because you didn't match his stock portfolio")
+            print("Unfortunately, Jayden projected your future retirement and broke things off because you didn't match his stock portfolio")
+            print("Do you want to play again?")
+            print("1. Yes")
+            print("2. No")
+            gm = int(input("CHOOSE AN OPTION. "))
+            if gm == 1:
+                repeat = 0
+            else:
+                print("Thank you for playing.")
+                repeat = 2
+                return None
 
 
 def premed() -> None:
     """Pre Med."""
-    points = 0
-    print("Story: It's the first day of your CHEM 101 class. You're in your recitation group with a boy who has messy brown hair and the bluest eyes you've ever seen. More importantly, he seems just as lost as you feel right now.")
-    print("Hi my name is John. What's your name?")
-    player = input("What is your name? ")
-    print(f"Cameron: It's nice to meet you {player}.")
-    print(f"{player}: Hi.")
-    print("John: Do you understand what's going on in class?")
-    print("1. Yeah, I do actually.")
-    print("2. No, not really.")
-    print("3. Sort of, but I definitely need to review today's lecture")
-    a = int(input("CHOOSE AN OPTION. "))
-    points == points + 10
-    if a == 1:
-        points = points + 10
-        print("John: Really? Wow, I'm really struggling right now. Would you like to study together at Davis? I know you don't really need it, but I'd love to have a study buddy.")
-        print("1. Actually, I'd love to have a study buddy.")
-        print("2. Sorry, my friend and I are going to finnish a lab report after this.")
-        a_1 = int(input("CHOOSE AN OPTION. "))
-        if a_1 == 1:
-            print("John: Great! I'll have someone to suffer through chemistry with.")
-            points = 20
-        else:
-            print("Game Over")
-            print(f"Points: {points}")
-            return None
-    else:
-        if a == 2:
+    repeat = 0
+    while repeat < 1:
+        points = 0
+        print("Story: It's the first day of your CHEM 101 class. You're in your recitation group with a boy who has messy brown hair and the bluest eyes you've ever seen. More importantly, he seems just as lost as you feel right now.")
+        print("Hi my name is John. What's your name?")
+        player = input("What is your name? ")
+        print(f"Cameron: It's nice to meet you {player}.")
+        print(f"{player}: Hi.")
+        print("John: Do you understand what's going on in class?")
+        print("1. Yeah, I do actually.")
+        print("2. No, not really.")
+        print("3. Sort of, but I definitely need to review today's lecture")
+        a = int(input("CHOOSE AN OPTION. "))
+        points == points + 10
+        if a == 1:
             points = points + 10
-            print("John: Yeah, I'm completely lost too. Would you like to study in Davis together? Maybe we can make sense of some of this gibberish.")
-            print("1. Yeah, I'd like that.")
-            print("2. Sorry, I'm not really interested.")
-            a_2 = int(input("CHOOSE AN OPTION. "))
-            if a_2 == 1:
-                print("Jayden: Great! It's nice to know I'm not the only one lost.")
+            print("John: Really? Wow, I'm really struggling right now. Would you like to study together at Davis? I know you don't really need it, but I'd love to have a study buddy.")
+            print("1. Actually, I'd love to have a study buddy.")
+            print("2. Sorry, my friend and I are going to finnish a lab report after this.")
+            a_1 = int(input("CHOOSE AN OPTION. "))
+            if a_1 == 1:
+                print("John: Great! I'll have someone to suffer through chemistry with.")
                 points = 20
             else:
                 print("Game Over")
                 print(f"Points: {points}")
-                return None
-        else: 
-            if a == 3:
+                print("Do you want to play again?")
+                print("1. Yes")
+                print("2. No")
+                gm = int(input("CHOOSE AN OPTION. "))
+                if gm == 1:
+                    repeat = 0
+                else:
+                    print("Thank you for playing.")
+                    repeat = 2
+                    return None
+        else:
+            if a == 2:
                 points = points + 10
-                print("John: Would you like to review it together in Davis? I have some notes form AP Chem in high school but it's been so long since I've looked at them.")
-                print("1. Sounds good to me.")
-                print("2. No thanks.")
-                a_3 = int(input("CHOOSE AN OPTION. "))
-                if a_3 == 1:
-                    print("Jayden: Great. Hopefully we'll be able to figure some of this stuff out.")
+                print("John: Yeah, I'm completely lost too. Would you like to study in Davis together? Maybe we can make sense of some of this gibberish.")
+                print("1. Yeah, I'd like that.")
+                print("2. Sorry, I'm not really interested.")
+                a_2 = int(input("CHOOSE AN OPTION. "))
+                if a_2 == 1:
+                    print("Jayden: Great! It's nice to know I'm not the only one lost.")
                     points = 20
                 else:
                     print("Game Over")
                     print(f"Points: {points}")
-                    return None
-    if points >= 20:
-        print("Story: You guys walk to Davis talking about all the other classes you guys are taking right now and how CHEM 101 falls into it your majors.He holds the door open for you.")
-        print(f"John: After you, {player}")
-        print("Thank you.")
-        print("1. Hold the gate open for him.")
-        print("2. Let him open the gate himself.")
-        b = int(input("CHOOSE AN OPTION. "))
-        if b == 1:
-            points == points + 10
-        print("John: Let's stay on the first floor.")
-        print("Story: You walk around the first floor and manage to find some seats. What do you want to start with?")
-        print("1. Reviewing today's lecture.")
-        print("2. Pearson homework.")
-        print("3. Readings for next class.")
-        input("CHOOSE AN OPTION. ")
-        points = points + 10
-        print(f"{player}: So what are your plans after college?")
-        print("John: Personally, I want to get into med school. Maybe Chapel Hill's but I'm just kind of aiming to get in somewhere right now.")
-        print("John: So what do you want to go into?")
-        print("1. A STEM major")
-        print("2. A non-STEM major.")
-        c = int(input("CHOOSE AN OPTION"))
-        if c == 1:
+                    print("Do you want to play again?")
+                    print("1. Yes")
+                    print("2. No")
+                    gm = int(input("CHOOSE AN OPTION. "))
+                    if gm == 1:
+                        repeat = 0
+                    else:
+                        print("Thank you for playing.")
+                        repeat = 2
+                        return None
+            else: 
+                if a == 3:
+                    points = points + 10
+                    print("John: Would you like to review it together in Davis? I have some notes form AP Chem in high school but it's been so long since I've looked at them.")
+                    print("1. Sounds good to me.")
+                    print("2. No thanks.")
+                    a_3 = int(input("CHOOSE AN OPTION. "))
+                    if a_3 == 1:
+                        print("Jayden: Great. Hopefully we'll be able to figure some of this stuff out.")
+                        points = 20
+                    else:
+                        print("Game Over")
+                        print(f"Points: {points}")
+                        print("Do you want to play again?")
+                        print("1. Yes")
+                        print("2. No")
+                        gm = int(input("CHOOSE AN OPTION. "))
+                        if gm == 1:
+                            repeat = 0
+                        else:
+                            print("Thank you for playing.")
+                            repeat = 2
+                            return None
+        if points >= 20:
+            print("Story: You guys walk to Davis talking about all the other classes you guys are taking right now and how CHEM 101 falls into it your majors.He holds the door open for you.")
+            print(f"John: After you, {player}")
+            print("Thank you.")
+            print("1. Hold the gate open for him.")
+            print("2. Let him open the gate himself.")
+            b = int(input("CHOOSE AN OPTION. "))
+            if b == 1:
+                points == points + 10
+            print("John: Let's stay on the first floor.")
+            print("Story: You walk around the first floor and manage to find some seats. What do you want to start with?")
+            print("1. Reviewing today's lecture.")
+            print("2. Pearson homework.")
+            print("3. Readings for next class.")
+            input("CHOOSE AN OPTION. ")
             points = points + 10
+            print(f"{player}: So what are your plans after college?")
+            print("John: Personally, I want to get into med school. Maybe Chapel Hill's but I'm just kind of aiming to get in somewhere right now.")
+            print("John: So what do you want to go into?")
+            print("1. A STEM major")
+            print("2. A non-STEM major.")
+            c = int(input("CHOOSE AN OPTION"))
+            if c == 1:
+                points = points + 10
+            else:
+                points = points - 10
+            print("Story: You two crack open your laptops, books and notebooks. The entire table is covered with your guys' study materials.")
+            print("You: How are you doing in lab?")
+            print("John: They're terrible. They take so long. I think I spent over three hours on my last lab report.")
+            print("1. Wow that sounds tough.")
+            print("2. You're just making a big deal of nothing.")
+            d = int(input("CHOOSE AN OPTION"))
+            if d == 1:
+                points = points + 10
+            else:
+                points = points - 10
+            print("1. Continue studying in silence.")
+            print("2. Keep trying to make small talk while he's focusing.")
+            e = int(input("CHOOSE AN OPTION"))
+            if e == 1:
+                points = points + 10
+                print("Yeah, I'd like to live in a city too.")
+            else:
+                points = points - 10
+                print("Oh. That's too bad.")
+        print(f"Story: {player} and Jayden have finished your study session. Both you and he seemed to get a lot of work done and it's been a productive day over all.")
+        print(f"Points: {points}")
+        if points >= 50:
+            print("Congratualtions! Your date with John was a success and you two become regular study buddies for the rest of undergrad. He eventually gets into the UNC Med School and you family is so happy that you found a successful boyfriend.")
+            print(NAMED_CONSTANT)
+            print("Do you want to play again?")
+            print("1. Yes")
+            print("2. No")
+            gm = int(input("CHOOSE AN OPTION. "))
+            if gm == 1:
+                repeat = 0
+            else:
+                print("Thank you for playing.")
+                repeat = 2
+                return None
         else:
-            points = points - 10
-        print("Story: You two crack open your laptops, books and notebooks. The entire table is covered with your guys' study materials.")
-        print("You: How are you doing in lab?")
-        print("John: They're terrible. They take so long. I think I spent over three hours on my last lab report.")
-        print("1. Wow that sounds tough.")
-        print("2. You're just making a big deal of nothing.")
-        d = int(input("CHOOSE AN OPTION"))
-        if d == 1:
-            points = points + 10
-        else:
-            points = points - 10
-        print("1. Continue studying in silence.")
-        print("2. Keep trying to make small talk while he's focusing.")
-        e = int(input("CHOOSE AN OPTION"))
-        if e == 1:
-            points = points + 10
-            print("Yeah, I'd like to live in a city too.")
-        else:
-            points = points - 10
-            print("Oh. That's too bad.")
-    print(f"Story: {player} and Jayden have finished your study session. Both you and he seemed to get a lot of work done and it's been a productive day over all.")
-    print(f"Points: {points}")
-    if points >= 50:
-        print("Congratualtions! Your date with John was a success and you two become regular study buddies for the rest of undergrad. He eventually gets into the UNC Med School and you family is so happy that you found a successful boyfriend.")
-        print(NAMED_CONSTANT)
-        return None
-    else:
-        print("Unfortunately, John went off to study on his own the minute finals season hit and you guys haven't really talked since then.")
-        return None
+            print("Unfortunately, John went off to study on his own the minute finals season hit and you guys haven't really talked since then.")
+            print("Do you want to play again?")
+            print("1. Yes")
+            print("2. No")
+            gm = int(input("CHOOSE AN OPTION. "))
+            if gm == 1:
+                __name__ == "__main__"
+            else:
+                print("Thank you for playing.")
+                repeat = 2
+                return None
 
 
 def Dukey(choice: int) -> int:
@@ -357,7 +464,13 @@ def Dukey(choice: int) -> int:
         else:
             print("Game Over")
             print(f"Points: {points}")
-            return points
+            print("Do you want to play again?")
+            print("1. Yes")
+            print("2. No")
+            gm = int(input("CHOOSE AN OPTION. "))
+            if gm == 2:
+                print("Thank you for playing.")
+                return points
     else:
         if a == 2:
             points = points + 10
@@ -371,7 +484,13 @@ def Dukey(choice: int) -> int:
             else:
                 print("Game Over")
                 print(f"Points: {points}")
-                return points
+                print("Do you want to play again?")
+                print("1. Yes")
+                print("2. No")
+                gm = int(input("CHOOSE AN OPTION. "))
+                if gm == 2:
+                    print("Thank you for playing.")
+                    return points
         else: 
             if a == 3:
                 points = points + 10
@@ -385,7 +504,13 @@ def Dukey(choice: int) -> int:
                 else:
                     print("Game Over")
                     print(f"Points: {points}")
-                    return points
+                    print("Do you want to play again?")
+                    print("1. Yes")
+                    print("2. No")
+                    gm = int(input("CHOOSE AN OPTION. "))
+                    if gm == 2:
+                        print("Thank you for playing.")
+                        return points
     if points >= 20:
         print("Story: You guys meet at the Duke Gardens. You walk the romantic pathways together while looking at the beautiful plants.")
         print(f"{player}: So what's your major?")
@@ -431,10 +556,12 @@ def Dukey(choice: int) -> int:
 
 
 def main() -> None:
-    """The program's entrypoint."""
-    points = 0
+    """The program's main entry point."""
+    points: int = 0
+    player: str = input("What is your name? ")
     repeat = 0
     while repeat < 1:
+        print(f"Greetings {player}!")
         greet()
         print("Which is the following special UNC boys would you like to pursue a relationship with?")
         print("1. The frat boy. He's fun and wild and your weekends are always a guaranteed fun time. The secret and chaotic life of a fraternity is something that will always keep you on your toes.")

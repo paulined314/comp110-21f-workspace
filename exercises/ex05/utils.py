@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """More List Utility Functions."""
 
 __author__ = "730390549"
@@ -48,3 +49,10 @@ def concat(a: list[int], b: list[int]) -> list[int]:
         c.append(b[i2])
         i2 += 1
     return c
+=======
+"""List utility functions part 2."""
+
+__author__ = "123456789"
+
+# Define your functions below
+>>>>>>> 7fee9dc6edad0a3ed524716ae227d1e6de158d67

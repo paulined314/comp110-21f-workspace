@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """All(Level: Novice)."""
 
 __author__ = "730390549"
@@ -49,3 +50,11 @@ def max(a: list[int]) -> int:
                 great = a[i]
             i += 1
         return great
+=======
+"""List utility functions."""
+
+__author__ = "123456789"
+
+
+# TODO: Implement your functions here.
+>>>>>>> 7fee9dc6edad0a3ed524716ae227d1e6de158d67

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """Dictionaries Unit Test."""
 
 __author__ = "730390549"
@@ -57,3 +58,11 @@ def test_count_three() -> None:
     """Count 3."""
     a: list[str] = ["Pauline", "Kayla", "Tam", "Danny"]
     assert count(a) == {"Pauline": 1, "Kayla": 1, "Tam": 1, "Danny": 1}
+=======
+"""Unit tests for dictionary functions."""
+
+# TODO: Uncomment the below line when ready to write unit tests
+# from exercises.ex06.dictionaries import invert, favorite_color, count
+
+__author__ = "123456789"
+>>>>>>> 7fee9dc6edad0a3ed524716ae227d1e6de158d67

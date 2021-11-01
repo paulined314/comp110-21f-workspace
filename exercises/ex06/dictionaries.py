@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """Dictionaries."""
 
 __author__ = "730390549"
@@ -39,3 +40,10 @@ def count(a: list[str]) -> dict[str, int]:
         else:
             counter[item] = 1
     return counter
+=======
+"""Practice with dictionaries."""
+
+__author__ = "123456789"
+
+# Define your functions below
+>>>>>>> 7fee9dc6edad0a3ed524716ae227d1e6de158d67

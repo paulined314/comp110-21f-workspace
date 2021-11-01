@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """More List Utility Functions."""
 
 __author__ = "730390549"
@@ -66,3 +67,11 @@ def test_concat_3() -> None:
     a = [1, 2, 3]
     b = [4]
     assert concat(a, b) == [1, 2, 3, 4]
+=======
+"""Unit tests for list utility functions."""
+
+# TODO: Uncomment the below line when ready to write unit tests
+# from exercises.ex05.utils import only_evens, sub, concat
+
+__author__ = "123456789"
+>>>>>>> 7fee9dc6edad0a3ed524716ae227d1e6de158d67

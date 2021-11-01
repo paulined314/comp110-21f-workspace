@@ -1,3 +1,7 @@
+"""Utility Functions."""
+
+__author__ = "740490549"
+
 from csv import DictReader
 
 
@@ -30,11 +34,55 @@ def column_values(table: list[dict[str, str]], column: str) -> list[str]:
     return result
 
 
-def columar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
+def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
     """Transform a row-orientated table to a column-orientated table."""
     result: dict[str, list[str]] = {}
 
     first_row: dict[str, str] = row_table[0]
     for column in first_row:
         result[column] = column_values(row_table, column)
+    return result
+
+
+def head(a: dict[str, list[str]], N: int) -> dict[str, list[str]]:
+    """Head."""
+    result: dict[str, list[str]] = {}
+    if N >= len(a):
+        for key in a:
+            result[key] = []
+            i: int = 0
+            while i < len(a):
+                result[key].append(a[key][i])
+                i += 1
+    else: 
+        for key in a:
+            result[key] = []
+            counter: int = 0
+            while counter < N:
+                result[key].append(a[key][counter])
+                counter += 1
+    return result
+
+
+def select(a: dict[str, list[str]], b: list[str]) -> dict[str, list[str]]:
+    """Select."""
+    result: dict[str, list[str]] = {}
+    for key in b:
+        result[key] = a[key]
+    return result
+
+
+def concat(a: dict[str, list[str]], b: dict[str, list[str]]) -> dict[str, list[str]]:
+    """Concat."""
+    result: dict[str, list[str]] = {}
+    for key in a:
+        result[key] = a[key]
+    for key in b:
+        if key in result:
+            i: int = 0
+            while i < len(b[key]):
+                result[key].append(b[key][i])
+                i += 1
+        else: 
+            result[key] = b[key]
     return result

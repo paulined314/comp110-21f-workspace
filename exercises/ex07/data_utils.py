@@ -86,3 +86,14 @@ def concat(a: dict[str, list[str]], b: dict[str, list[str]]) -> dict[str, list[s
         else: 
             result[key] = b[key]
     return result
+
+
+def count(a: list[str]) -> dict[str, int]:
+    """Count."""
+    counter: dict[str, int] = {}
+    for item in a:
+        if item in counter:
+            counter[item] += 1
+        else:
+            counter[item] = 1
+    return counter
